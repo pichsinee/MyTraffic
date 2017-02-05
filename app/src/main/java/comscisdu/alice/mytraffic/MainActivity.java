@@ -1,7 +1,10 @@
 package comscisdu.alice.mytraffic;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,6 +44,20 @@ public class MainActivity extends AppCompatActivity {
         //Create ListView
         MyAdapter myAdapter = new MyAdapter(MainActivity.this, ints, titleStrings, shortDetailStrings);
         listView.setAdapter(myAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() { //  เมื่อมีการคลิกที่ข้อมูลตำแหน่งใด จะเก็บตำแหน่งข้อมูลจากการคลิก
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Intent intent = new Intent(MainActivity.this, Detail.class);   //สืยทอดความสามารถในการสืบทอด (intent) โดยส่งข้อมูลจาก MainActivity ไปยัง Detail
+                intent.putExtra("Title", titleStrings[i]);   //ส่งข้อมูลการ intent 3 ค่า title, detail, image โดยการ PutExtra
+                intent.putExtra("Detail", detailStrings[i]);
+                intent.putExtra("Image", ints[i]);
+                startActivity(intent);
+
+
+            }
+        });
 
     }   //Main method
 

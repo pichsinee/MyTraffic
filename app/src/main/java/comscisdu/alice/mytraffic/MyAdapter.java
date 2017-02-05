@@ -11,6 +11,7 @@ import android.widget.TextView;
 /**
  * Created by aom on 5/2/2560.
  */
+// Activity นี้ ทำเพื่อสร้าง Layout เสมือน เพื่อนำไปแสดงผลบนหน้า MainActivity
 
 public class MyAdapter extends BaseAdapter{
 
