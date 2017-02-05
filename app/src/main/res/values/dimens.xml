@@ -5,5 +5,8 @@
 
     <dimen name="h1">40sp</dimen>
     <dimen name="h2">20sp</dimen>
+    <dimen name="icon">120dp</dimen>
+    <dimen name="image">200dp</dimen>
+    <dimen name="my_margin">15dp</dimen>
 
 </resources>
