@@ -8,15 +8,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="comscisdu.alice.mytraffic.MainActivity">
+    tools:context="comscisdu.alice.mytraffic.MainActivity"
+    android:background="@drawable/bg8">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
-        android:textSize="30sp"
+        android:textSize="@dimen/h1"
         android:textStyle="normal|bold"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@android:color/holo_orange_light"
         android:layout_centerHorizontal="true"
         android:id="@+id/txtTitle" />
 
@@ -24,5 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/txtTitle"
-        android:id="@+id/livTraffic" />
+        android:id="@+id/livTraffic"
+        android:background="#89ffffff" />
 </RelativeLayout>
